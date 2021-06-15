@@ -13,12 +13,12 @@ export const Header = () => {
             }
             <Container>
                 <Logo>
-                    <a href="#">
+                    <a href="/">
                         <img src="images/logo.svg" />
                     </a>
                 </Logo>
                 <MainNav>
-                    <a href="#">Model S</a>
+                    <a href="/models">Model S</a>
                     <a href="#">Model 3</a>
                     <a href="#">Model X</a>
                     <a href="#">Model Y</a>
