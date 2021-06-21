@@ -64,16 +64,42 @@ left:0;
 right:0;
 z-index: 1;
 `
-const MainNav = styled.div`
+const MainNav = styled.div`    
 a {
    padding: 0 10px;
    margin: 0 8px;
-   :hover{
-        background: border-box;
-        background-color: #A6ACAF;
+   position: relative;
+   z-index: 1;
+   :after{       
+        color: transparent;
+        background: #A6ACAF;
+        visibility: none;
+        opacity: 0; 
+        content: '.'; 
+        height: 1px;  
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        margin: auto;
+        transition: all .5s;
         border-radius: 15px;
-        padding: 5px 10px;             
+        padding: 2px;
+           
    }
+   :hover{
+       :after{
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+       }
+    
+}  
+   
 }
 @media (max-width:764px) {
     display: none;
